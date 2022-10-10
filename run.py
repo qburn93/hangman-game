@@ -156,9 +156,29 @@ def guess_letter():
 
  def check_for_game_over():
     """Checks to see if player won or lost based on guesses left"""
-    pass
+    global lives_left
+    global game_over
+    global correctly_guessed_letters
+    # Drawn the whole hangman picture if lives left equals to 0 else game is won and user is greeted with congratulations
+    # Negative feed back loop checks this
+    if lives_left <= 0:
+        game_over = True
+        draw_hangman()
+        print("Game Over! The hidden word was" + random_chosen_word + ". Dont give up now! Try again")
+    # Positive feedback loop assumes game is over because everything was correctly guessed
+    # Iterates through every letter
+    else:
+        guessed_all_letters = True
+        for letter in random_chosen_word:
+            if letter not in correctly_guessed_letters:
+                guessed_all_letters = False
+                break
+        if guessed_all_letters:
+            game_over = True
+            print("Winner! Congrats! You can play again if you like")
 
  
  def main():
     """Entry point of application, calls all other methods in a loop"""
-    pass
+    
+    
