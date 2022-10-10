@@ -10,14 +10,27 @@ random_chosen_word = ""
 # Global variable for lives left(integer)
 lives_left = 7
 
-# Global variable for game over
+# global Variable for game over(boolian)
 game_over = False
 
 
-    def random_word():
+def random_word():
     """Returns a random selected word from our list of acceptable words"""
-    pass
-
+    global random_chosen_word
+    
+    words_list = [
+        "Ambiguous",
+        "Linear",
+        "Extravagant",
+        "Bali",
+        "Singapore",
+        "Institute",
+        "University",
+    ]
+    # Generate random sequance of words from list
+    random.seed(time.time())
+    random_chosen_word = random.choice(words_list)
+    random_chosen_word = random_chosen_word.lower()
 
 def draw_word():
     """Dashed out letters that are not guessed yet"""
@@ -38,7 +51,7 @@ def guess_letter():
     """Checks if the one letter guessed is correct or wrong, and updates global variables based on the result"""
     pass
  
-# Variable for game over(boolian)
+
  def check_for_game_over():
     """Checks to see if player won or lost based on guesses left"""
     pass
