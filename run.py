@@ -27,14 +27,25 @@ def random_word():
         "Institute",
         "University",
     ]
-    # Generate random sequance of words from list
+    # Generate random sequance of words from word list
     random.seed(time.time())
     random_chosen_word = random.choice(words_list)
+    # Lower case to help do the comparison later on to make sure we're not comparing an uppercase letter to a lowercase 
     random_chosen_word = random_chosen_word.lower()
 
 def draw_word():
     """Dashed out letters that are not guessed yet"""
-    pass
+    global correctly_guessed_letters
+    global random_chosen_word
+    # Lopping through from 0 to the length of the random chosen word and if that letter is guessed it will be displayed with a space at the end
+    for i in range(0, len(random_chosen_word)):
+        letter = random_chosen_word[i]
+        if letter in correctly_guessed_letters:
+            print(letter, end=" ")
+        #If word is not guessed yet it will be displayed with an underscore bar
+        else:
+            print("_", end=" ")
+    
 
 
 def draw_hangman():
