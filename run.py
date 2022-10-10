@@ -8,7 +8,7 @@ incorrectly_guessed_letters = []
 random_chosen_word = ""
 
 # Global variable for lives left(integer)
-lives_left = 7
+lives_left = 6
 
 # global Variable for game over(boolian)
 game_over = False
@@ -50,12 +50,81 @@ def draw_word():
 
 def draw_hangman():
     """Hangman printed based on number of guesses left"""
-    pass
+    global lives_left
+
+    if lives_left == 6:
+        print("+------------+")
+        print("|            |")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("+-------+")
+    elif lives_left == 5:
+        print("+------------+")
+        print("|            |")
+        print("|            O")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("+-------+")
+    elif lives_left == 4:
+        print("+------------+")
+        print("|            |")
+        print("|            O")
+        print("|            |")
+        print("|")
+        print("|")
+        print("|")
+        print("+-------+")
+    elif lives_left == 3:
+        print("+------------+")
+        print("|            |")
+        print("|            O")
+        print("|            |")
+        print("|           /")
+        print("|")
+        print("|")
+        print("+-------+")
+    elif lives_left == 2:
+        print("+------------+")
+        print("|            |")
+        print("|            O")
+        print("|            |")
+        print("|           / \\")
+        print("|")
+        print("|")
+        print("+-------+")
+    elif lives_left == 1:
+        print("+------------+")
+        print("|            |")
+        print("|            O")
+        print("|            |\\")
+        print("|           / \\")
+        print("|")
+        print("|")
+        print("+-------+")
+    elif lives_left == 0:
+        print("+------------+")
+        print("|            |")
+        print("|            O")
+        print("|           /|\\")
+        print("|           / \\")
+        print("|")
+        print("|")
+        print("+-------+")
 
 
 def get_valid_letter():
-    """Makes sure the number of letters typed is different each time and is typed only once"""
-    pass
+    """Makes sure the number of letters typed is different each time and is typed only once
+        and is checking for validation"""
+    is_leter_valid = False
+    letter = ""
+    while is_leter_valid is False:
+        letter = input("Enter letter guess: ")
+        letter = letter.strip().lower()
 
 
 def guess_letter():
