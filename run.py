@@ -125,7 +125,7 @@ def get_valid_letter():
     while is_leter_valid is False:
         letter = input("Enter letter guess:\n")
         letter = letter.strip().lower()
-        #Checks for error when user inputs answers
+        #Checks for error when user inputs answers and validates that new letter is being guessed
         if len(letter) <= 0 or len(letter) > 1:
             print("Letter must be of 1 length")
         elif letter.isalpha():
@@ -135,11 +135,23 @@ def get_valid_letter():
                 is_leter_valid = True
         else:
             print("letter must be (a-z)")
+    
+    return letter
 
 
 def guess_letter():
     """Checks if the one letter guessed is correct or wrong, and updates global variables based on the result"""
-    pass
+    global correctly_guessed_letters
+    global incorrectly_guessed_letters
+    global lives_left
+
+    letter = get_valid_letter()
+    #Checks if guessed letter is in our random chosen word from list and appends it to either correct guess or wrong guess and subtracts by 1 life for wrong guess
+    if letter in random_chosen_word:
+        correctly_guessed_letters.append(letter)
+    else:
+        incorrectly_guessed_letters.append(letter)
+        lives_left -= 1
  
 
  def check_for_game_over():
