@@ -123,8 +123,18 @@ def get_valid_letter():
     is_leter_valid = False
     letter = ""
     while is_leter_valid is False:
-        letter = input("Enter letter guess: ")
+        letter = input("Enter letter guess:\n")
         letter = letter.strip().lower()
+        #Checks for error when user inputs answers
+        if len(letter) <= 0 or len(letter) > 1:
+            print("Letter must be of 1 length")
+        elif letter.isalpha():
+            if letter in correctly_guessed_letters or letter incorrectly_guessed_letters:
+                print("You have already guessed that letter" + letter +", please try again")
+            else:
+                is_leter_valid = True
+        else:
+            print("letter must be (a-z)")
 
 
 def guess_letter():
