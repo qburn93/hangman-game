@@ -1,3 +1,6 @@
+import random
+import time
+
 # Global Variable for correctly guessed letters(array)
 correctly_guessed_letters = []
 
