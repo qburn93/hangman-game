@@ -180,5 +180,28 @@ def guess_letter():
  
  def main():
     """Entry point of application, calls all other methods in a loop"""
+    global game_over
+    
+    
+    print("-----------------")
+    print("|The Hangman game|")
+    print("-----------------")
+
+    while game_over is False:
+        draw_hangman()
+        draw_word()
+
+        if len(incorrectly_guessed_letters) > 0:
+            print("Incorrect guesses: ")
+            print(incorrectly_guessed_letters)
+
+        guess_letter()
+        check_for_game_over()
+
+
+if __name__ == '__main__':
+    """Will only be called when you run the pythron program from the terminal or an IDE like Pycharm"""
+
+    main()
     
     
