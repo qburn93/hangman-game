@@ -154,7 +154,7 @@ def guess_letter():
         lives_left -= 1
  
 
- def check_for_game_over():
+def check_for_game_over():
     """Checks to see if player won or lost based on guesses left"""
     global lives_left
     global game_over
