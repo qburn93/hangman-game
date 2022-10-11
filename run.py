@@ -178,7 +178,7 @@ def check_for_game_over():
             print("Winner! Congrats! You can play again if you like")
 
  
- def main():
+def main():
     """Entry point of application, calls all other methods in a loop"""
     global game_over
     
