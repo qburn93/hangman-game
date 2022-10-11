@@ -44,7 +44,8 @@ In this section, you should go over the different parts of your project, and des
 
 ### Testing and fixed Bugs
 - The program was tested manually with pep8:
-
+ 
+![Commentbugs](https://i.imgur.com/QJzs45l.png)
 
 
 
