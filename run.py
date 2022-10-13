@@ -1,5 +1,6 @@
 import random
 import time
+from hangman import draw_hangman
 
 # Global Variable for correctly guessed letters(array)
 correctly_guessed_letters = []
@@ -51,73 +52,7 @@ def draw_word():
             print("_", end=" ")
     
 
-def draw_hangman():
-    """Hangman printed based on number of guesses left"""
-    global lives_left
 
-    if lives_left == 6:
-        print("+------------+")
-        print("|            |")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 5:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 4:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|            |")
-        print("|")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 3:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|            |")
-        print("|           /")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 2:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|            |")
-        print("|           / \\")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 1:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|            |\\")
-        print("|           / \\")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 0:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|           /|\\")
-        print("|           / \\")
-        print("|")
-        print("|")
-        print("+-------+")
 
 
 def get_valid_letter():
