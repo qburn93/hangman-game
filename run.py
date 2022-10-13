@@ -20,7 +20,7 @@ def main():
 def play_loop():
     global play_game
     play_game = input("Do You want to play again? y = yes, n = no \n")
-    while play_game not in ["y", "n","Y","N"]:
+    while play_game not in ["y", "n", "Y", "N"]:
         play_game = input("Do You want to play again? y = yes, n = no \n")
     if play_game == "y":
         main()
@@ -35,7 +35,7 @@ def hangman():
     global already_guessed
     global play_game
     limit = 5
-    guess = input("This is the Hangman Word: " + display + " Enter your guess: \n")
+    guess = input("The Hangman Word: " + display + " Enter your guess: \n")
     guess = guess.strip()
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
         print("Invalid Input, Try a letter\n")
@@ -114,7 +114,7 @@ def hangman():
                   "  |    / \ \n"
                   "__|__\n")
             print("Wrong guess. You are hanged!!!\n")
-            print("The word was:",already_guessed,word)
+            print("The word was:", already_guessed, word)
             play_loop()
 
     if word == '_' * length:
