@@ -1,6 +1,14 @@
 import random
 import time
 
+# Starts steps to invite in the game
+print("\nWelcome to Hangman game\n")
+name = input("Enter your name: ")
+print("Hello " + name + "! Good luck!")
+time.sleep(2)
+print("Game is about to start!\n Let's play Hangman!")
+time.sleep(3)
+
 def main():
     global count
     global display
