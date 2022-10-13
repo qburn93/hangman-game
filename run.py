@@ -9,6 +9,7 @@ time.sleep(2)
 print("Game is about to start!\n Let's play Hangman!")
 time.sleep(3)
 
+# Global variablies required to run game
 def main():
     global count
     global display
