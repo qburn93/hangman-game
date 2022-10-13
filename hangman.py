@@ -1,8 +1,6 @@
-def draw_hangman():
-    """Hangman printed based on number of guesses left"""
-    global lives_left
+lives_left = {
 
-    if lives_left == 6:
+    6:  """
         print("+------------+")
         print("|            |")
         print("|")
@@ -11,25 +9,31 @@ def draw_hangman():
         print("|")
         print("|")
         print("+-------+")
-    elif lives_left == 5:
-        print("+------------+")
-        print("|            |")
-        print("|            O")
-        print("|")
-        print("|")
-        print("|")
-        print("|")
-        print("+-------+")
-    elif lives_left == 4:
+        """,
+    
+    5:  """
         print("+------------+")
         print("|            |")
         print("|            O")
+        print("|")
+        print("|")
+        print("|")
+        print("|")
+        print("+-------+")
+        """
+    
+    4:  """
+        print("+------------+")
+        print("|            |")
+        print("|            O")
         print("|            |")
         print("|")
         print("|")
         print("|")
         print("+-------+")
-    elif lives_left == 3:
+        """
+    
+    3:  """
         print("+------------+")
         print("|            |")
         print("|            O")
@@ -38,7 +42,9 @@ def draw_hangman():
         print("|")
         print("|")
         print("+-------+")
-    elif lives_left == 2:
+        """
+    
+    2:  """
         print("+------------+")
         print("|            |")
         print("|            O")
@@ -47,7 +53,9 @@ def draw_hangman():
         print("|")
         print("|")
         print("+-------+")
-    elif lives_left == 1:
+        """
+    
+    1:  """
         print("+------------+")
         print("|            |")
         print("|            O")
@@ -56,7 +64,9 @@ def draw_hangman():
         print("|")
         print("|")
         print("+-------+")
-    elif lives_left == 0:
+        """
+    
+    0:  """
         print("+------------+")
         print("|            |")
         print("|            O")
@@ -65,3 +75,6 @@ def draw_hangman():
         print("|")
         print("|")
         print("+-------+")
+        """
+        
+            }
