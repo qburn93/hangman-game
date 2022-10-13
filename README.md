@@ -58,6 +58,7 @@ In this section, you should go over the different parts of your project, and des
 ### Unfixed Bugs
 
 - I have a bug at an early stage where the get_valid_letter thinks every letter input is correct and it does not continue the game it just congratulates for winning the game. Will update in future...
+![validatorbug](https://i.imgur.com/7bYv6rq.png)
 
 ## Deployment
 
