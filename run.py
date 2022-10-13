@@ -10,7 +10,9 @@ print("Game is about to start!\n Let's play Hangman!")
 time.sleep(3)
 
 # Global variablies required to run game
-def main():
+
+
+def main():  
     global count
     global display
     global word
@@ -26,6 +28,7 @@ def main():
     already_guessed = []
     play_game = ""
 
+
 def play_loop():
     global play_game
     play_game = input("Do You want to play again? y = yes, n = no \n")
@@ -36,6 +39,7 @@ def play_loop():
     elif play_game == "n":
         print("Thanks For Playing! We expect you back again!")
         exit()
+
 
 def hangman():
     global count
@@ -49,7 +53,6 @@ def hangman():
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
         print("Invalid Input, Try a letter\n")
         hangman()
-
 
     elif guess in word:
         already_guessed.extend([guess])
@@ -89,16 +92,16 @@ def hangman():
             print("Wrong guess. " + str(limit - count) + " guesses remaining\n")
 
         elif count == 3:
-           time.sleep(1)
-           print("   _____ \n"
-                 "  |     | \n"
-                 "  |     |\n"
-                 "  |     | \n"
-                 "  |      \n"
-                 "  |      \n"
-                 "  |      \n"
-                 "__|__\n")
-           print("Wrong guess. " + str(limit - count) + " guesses remaining\n")
+            time.sleep(1)
+            print("   _____ \n"
+                  "  |     | \n"
+                  "  |     |\n"
+                  "  |     | \n"
+                  "  |      \n"
+                  "  |      \n"
+                  "  |      \n"
+                  "__|__\n")
+            print("Wrong guess. " + str(limit - count) + " guesses remaining\n")
 
         elif count == 4:
             time.sleep(1)
