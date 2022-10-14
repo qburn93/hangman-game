@@ -1,12 +1,18 @@
 import random
 import time
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
+
 
 # Starts steps to invite in the game
-print("\nWelcome to Hangman game\n")
+
+print(Back.GREEN + Fore.WHITE + Style.BRIGHT + "\nWelcome to Hangman game\n")
 name = input("Enter your name: ")
 print("Hello " + name + "! Good luck!")
 time.sleep(2)
-print("Game is about to start!\n Let's play Hangman!")
+print(Fore.RED + "Game is about to start!\n Let's play Hangman!")
+print('\033[39m')
 time.sleep(3)
 
 # Global variablies required to run game
@@ -28,6 +34,8 @@ def main():
     already_guessed = []
     play_game = ""
 
+# Loop to re-execute the game when the first round ends
+
 
 def play_loop():
     global play_game
@@ -40,6 +48,8 @@ def play_loop():
         print("Thanks For Playing! We expect you back again!")
         exit()
 
+# Declaring all variable required for the game
+
 
 def hangman():
     global count
@@ -50,8 +60,10 @@ def hangman():
     limit = 5
     guess = input("The Hangman Word: " + display + " Enter your guess: \n")
     guess = guess.strip()
+    # Validating correct input
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
-        print("Invalid Input, Try a letter\n")
+        print(Back.RED + Fore.BLACK + "Invalid Input, Try a letter\n")
+        print('\033[39m')
         hangman()
 
     elif guess in word:
@@ -130,7 +142,7 @@ def hangman():
             play_loop()
 
     if word == '_' * length:
-        print("Congrats! You have guessed the word correctly!")
+        print(Back.CYAN + Fore.WHITE + "Congrats! You have guessed the word correctly!")
         play_loop()
 
     elif count != limit:
