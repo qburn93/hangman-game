@@ -62,6 +62,8 @@ The live link can be found here -
 ## Credits 
 - I want to credit CS students for inspiration and somewhat laying the mental ground image for me with my project.
 [Video Link](https://www.youtube.com/watch?v=ynwB-QfOPRw&t=614s&ab_channel=CSStudents)
+- Credit on how to implement time.sleep delay for increased immersion.
+[Programiz](https://www.programiz.com/python-programming/time/sleep)
 
 
 ### Content 
