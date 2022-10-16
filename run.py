@@ -8,6 +8,7 @@ colorama.init()
 
 # Starts steps to invite in the game
 
+
 print(Fore.WHITE + Style.BRIGHT + "\nWelcome to Hangman game\n")
 name = input("Please Enter your name: ")
 print("Hello " + name + "! Good luck!")

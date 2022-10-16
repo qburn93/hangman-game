@@ -24,7 +24,8 @@ If loop checks that if no input is given, or two letters are given at once, or a
 ![indentbug](https://i.imgur.com/72uHhKL.png)
 - While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost the restart of the game has no issues.
 ![newgamebug](https://i.imgur.com/nBZ7U90.png)
-- I tried changing to loop_game and play_game instead of calling for main function but it still didnt fixed the issue.
+- I tried changing to loop_game and play_game instead of calling for main function but it still didnt fixed the issue. 
+- Update: I noticed when restarting the repository the play again feature works after game is won and after a short while it does not work again.
 ![y/newgame](https://i.imgur.com/gclN4UM.png)
 
 - An error was caused by following line, where the word in play would not be displayed after game was lost, this was fixed by adding no blank space after the comma.
