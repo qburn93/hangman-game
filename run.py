@@ -14,6 +14,9 @@ print("Hello " + name + "! Good luck!")
 time.sleep(2)
 print(Fore.CYAN + "Game is about to start!\n Let's play Hangman!")
 print('\033[39m')
+print(Fore.GREEN + "Game Rules are:\n")
+print("1. You have 5 attempts to guess the correct word or else you lose.")
+print('\033[39m')
 time.sleep(3)
 
 # Global variablies required to run game
@@ -44,10 +47,12 @@ def play_loop():
     while play_game not in ["y", "n", "Y", "N"]:
         play_game = input("Do you want to play again? y = yes, n = no \n")
     if play_game == "y":
-        print("Let's go again!")
+        print(Fore.GREEN + "Let's go again!")
+        print('\033[39m')
         main()
     elif play_game == "n":
-        print("Thanks for playing!")
+        print(Fore.WHITE + Back.RED + Style.BRIGHT + "Thanks for playing!")
+        print('\033[39m')
         exit()
 
 # Declaring all variable required for the game
