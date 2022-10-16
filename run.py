@@ -19,7 +19,7 @@ time.sleep(3)
 # Global variablies required to run game
 
 
-def main():  
+def main():
     global count
     global display
     global word
@@ -27,7 +27,7 @@ def main():
     global length
     global play_game
     global lives
-    
+
     word = random.choice(words_to_guess)
     length = len(word)
     count = 0
@@ -41,12 +41,8 @@ def main():
 def play_loop():
     global play_game
     play_game = input("Do you want to play again? y = yes, n = no \n")
-
-
     while play_game not in ["y", "n", "Y", "N"]:
         play_game = input("Do you want to play again? y = yes, n = no \n")
-
-
     if play_game == "y":
         print("Let's go again!")
         main()
@@ -71,7 +67,7 @@ def hangman():
         print(Fore.RED + "Invalid input, Try a letter\n")
         print('\033[39m')
         hangman()
-        
+
     # If letter is guessed already
     elif guess in word:
         already_guessed.extend([guess])
@@ -79,14 +75,14 @@ def hangman():
         word = word[:index] + "_" + word[index + 1:]
         display = display[:index] + guess + display[index + 1:]
         print(display + "\n")
-        
+
     # If letter is incorrect
     elif guess in already_guessed:
         print("Already guessed that letter, try another letter.\n")
 
     else:
         count += 1
-        
+
         if count == 1:
             time.sleep(1)
             print("   _____ \n"
@@ -154,9 +150,8 @@ def hangman():
             print("The word was:", already_guessed, word)
             print('\033[39m')
             play_loop()
-        
+
     # If user has guessed all the letters
-    
     if word == '_' * length:
         print(Back.CYAN + Style.BRIGHT + "Congrats! You have guessed the correct word!")
         play_loop()
