@@ -23,9 +23,10 @@ If loop checks that if no input is given, or two letters are given at once, or a
 ![Commentbugs](https://i.imgur.com/QJzs45l.png)
 ![indentbug](https://i.imgur.com/72uHhKL.png)
 - While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost the restart of the game has no issues.
--UPDATE: This has been fixed. Issue was missing brackets after user is asked for input.
-![fixedbracketbug](https://i.imgur.com/0euCMjp.png)
-![newgamebug](https://i.imgur.com/MZGQAcP.png)
+![newgamebug](https://i.imgur.com/nBZ7U90.png)
+- I tried changing to loop_game and play_game instead of calling for main function but it still didnt fixed the issue.
+![y/newgame](https://i.imgur.com/gclN4UM.png)
+
 - An error was caused by following line, where the word in play would not be displayed after game was lost, this was fixed by adding no blank space after the comma.
 ![wordwas](https://i.imgur.com/b3Z3MsT.png)
 

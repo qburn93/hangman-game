@@ -48,6 +48,7 @@ def play_loop():
 
 
     if play_game == "y":
+        print("Let's go again!")
         main()
     elif play_game == "n":
         print("Thanks for playing!")
@@ -63,7 +64,7 @@ def hangman():
     global already_guessed
     global play_game
     limit = 5
-    guess = input("This is the hangman word: " + display + " Enter your guess: ")
+    guess = input("Hangman word: " + display + " Enter your guess: ")
     guess = guess.strip()
     # Validate the input
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
@@ -80,7 +81,10 @@ def hangman():
         print(display + "\n")
         
     # If letter is incorrect
-    elif guess not in word:
+    elif guess in already_guessed:
+        print("Already guessed that letter, try another letter.\n")
+
+    else:
         count += 1
         
         if count == 1:

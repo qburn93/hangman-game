@@ -1,1 +1,1 @@
-words_to_guess = ["january"]
+words_to_guess = ["mai"]
