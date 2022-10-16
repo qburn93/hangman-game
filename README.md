@@ -1,43 +1,18 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome Bogdan933,
-
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
-
-## Reminders
-
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
 
 # Hangman game
 
 
 
 ## User stories
-- The color combination is soothing and fits with everything.
-- Leaderboard feature is fun to have.
-- Questions were entertaining
-- Progress bar is contrast adds to immersion.
 
+## Program Features 
 
-## Features 
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
+At the start user is presented with input for their name.
+When user has lost the game, the option to play again or end the program is featured.
+Limit: It is the maximum guesses we provide to the user to guess a particular word.
+Guess: Takes the input from the user for the guessed letter. Guess.strip() removes the letter from the given word.
+If loop checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input and executes hangman again.
 
 ### Features Left to Implement
 
@@ -47,7 +22,10 @@ In this section, you should go over the different parts of your project, and des
  
 ![Commentbugs](https://i.imgur.com/QJzs45l.png)
 ![indentbug](https://i.imgur.com/72uHhKL.png)
-
+- While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost the restart of the game has no issues.
+![newgamebug](https://i.imgur.com/MZGQAcP.png)
+- An error was caused by following line, where the word in play would not be displayed after game was lost, this was fixed by adding no blank space after the comma.
+![wordwas](https://i.imgur.com/b3Z3MsT.png)
 
 
 

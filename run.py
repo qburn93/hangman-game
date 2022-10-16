@@ -1,5 +1,6 @@
 import random
 import time
+from words import words_to_guess
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
@@ -8,7 +9,7 @@ colorama.init()
 # Starts steps to invite in the game
 
 print(Back.GREEN + Fore.WHITE + Style.BRIGHT + "\nWelcome to Hangman game\n")
-name = input("Enter your name: ")
+name = input("Please Enter your name: ")
 print("Hello " + name + "! Good luck!")
 time.sleep(2)
 print(Fore.RED + "Game is about to start!\n Let's play Hangman!")
@@ -25,7 +26,7 @@ def main():
     global already_guessed
     global length
     global play_game
-    from words import words_to_guess
+    
     
     word = random.choice(words_to_guess)
     length = len(word)
@@ -45,7 +46,7 @@ def play_loop():
     if play_game == "y":
         main()
     elif play_game == "n":
-        print("Thanks For Playing! We expect you back again!")
+        print("Thanks For Playing!")
         exit()
 
 # Declaring all variable required for the game
@@ -137,12 +138,12 @@ def hangman():
                   "  |    /|\ \n"
                   "  |    / \ \n"
                   "__|__\n")
-            print("Wrong guess. You are hanged!!!\n")
-            print("The word was:", already_guessed, word)
+            print("Wrong guess. You have lost!!\n")
+            print("The word was:",already_guessed,word)
             play_loop()
 
     if word == '_' * length:
-        print(Back.CYAN + Fore.WHITE + "Congrats! You have guessed the word correctly!")
+        print(Back.CYAN + Fore.WHITE + "Congrats! You have guessed the correct word!")
         play_loop()
 
     elif count != limit:
