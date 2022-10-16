@@ -165,6 +165,3 @@ main()
 
 
 hangman()
-
-
-hangman()
