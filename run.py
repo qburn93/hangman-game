@@ -107,7 +107,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong" + str(limit - count) + " guesses left\n")
+            print(Fore.RED + "Wrong " + str(limit - count) + " guesses left\n")
             print('\033[39m')
 
         elif count == 2:
@@ -120,7 +120,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong" + str(limit - count) + " guesses left\n")
+            print(Fore.RED + "Wrong " + str(limit - count) + " guesses left\n")
             print('\033[39m')
 
         elif count == 3:
@@ -133,7 +133,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong" + str(limit - count) + " guesses left\n")
+            print(Fore.RED + "Wrong " + str(limit - count) + " guesses left\n")
             print('\033[39m')
 
         elif count == 4:
@@ -146,7 +146,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong" + str(limit - count) + " last guess\n")
+            print(Fore.RED + "Wrong " + str(limit - count) + " last guess\n")
             print('\033[39m')
 
         elif count == 5:

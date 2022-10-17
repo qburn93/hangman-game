@@ -1,1 +1,1 @@
-words_to_guess = ["mai"]
+words_to_guess = ["Nature", "Earth", "Venture", "Pike", "Spock", "Leopard", "Snow", "Mountains", "Polar"]
