@@ -33,7 +33,7 @@ print("   ______ \n"
 print(Fore.GREEN + "Game Rules are:\n")
 print("1. You have 5 attempts to guess the correct word or else you lose.")
 print('\033[39m')
-name = input(Fore.CYAN + "Please Enter your name: ")
+name = input(Fore.CYAN + "Please Enter your name:\n")
 print('\033[39m')
 print(Fore.MAGENTA + "Welcome " + name + "! Good luck!")
 time.sleep(2)
@@ -90,7 +90,7 @@ def hangman():
     global already_guessed
     global play_game
     limit = 5
-    guess = input("Hangman word: " + display + " Enter your guess: ")
+    guess = input("Hangman word: " + display + " Enter your guess:\n")
     guess = guess.strip()
     """Validates the input"""
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
