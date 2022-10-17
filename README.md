@@ -15,13 +15,16 @@ Guess: Takes the input from the user for the guessed letter. Guess.strip() remov
 If loop checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input and executes hangman again.
 
 ### Features Left to Implement
-
+- Several difficulties, from hard to medium and easy.
+- Saving highscore.
+- Add more visuals to intro / game immersion while playing.
 
 ### Testing and fixed Bugs
 - The program was tested manually with pep8:
- 
-![Commentbugs](https://i.imgur.com/QJzs45l.png)
-![indentbug](https://i.imgur.com/72uHhKL.png)
+ - Error messeges regarding character lenght of each code lines that I have had to shorten. 
+ - Several indentation issues that made functions break while creating the program.
+![Commentbugs](https://i.imgur.com/RcU8Aaj.png)
+
 - While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost the restart of the game has no issues.
 ![newgamebug](https://i.imgur.com/nBZ7U90.png)
 - I tried changing to loop_game and play_game instead of calling for main function but it still didnt fixed the issue. 
