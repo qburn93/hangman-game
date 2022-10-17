@@ -89,7 +89,7 @@ __Programs Used__
     - Cloning a repository with github desktop is easily done by clicking the green "code" button and choosing the "open in github desktop" option. If you do not have a clone already, github desktop will ask if you want to create a local clone. Click yes.
     - If you do it with git you have to write "git clone" and then specify what you want to clone.
 
-The live link can be found here - 
+The live link can be found here - https://hangman-python-game.herokuapp.com/
 
 
 
