@@ -1,3 +1,7 @@
+"""
+Import's for usage of words from words.py file
+Import's for usage of colorama, random and time.
+"""
 import random
 import time
 from words import words_to_guess
@@ -5,9 +9,10 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 
-
-# Starts steps to invite in the game
-
+"""
+Requested user name input as well as,
+introduction to game and rules with timed printed text
+"""
 
 print(Fore.WHITE + Style.BRIGHT + "\nWelcome to\n")
 time.sleep(0.5)
@@ -17,6 +22,14 @@ print("|-----HANGMAN GAME-----|")
 time.sleep(0.5)
 print("|----------------------|")
 time.sleep(1)
+print("   ______ \n"
+       "  |     | \n"
+       "  |     |\n"
+       "  |     | \n"
+       "  |     O \n"
+       "  |    /|\ \n"
+       "  |    / \ \n"
+       "__|__\n")
 print(Fore.GREEN + "Game Rules are:\n")
 print("1. You have 5 attempts to guess the correct word or else you lose.")
 print('\033[39m')
@@ -28,7 +41,7 @@ print("Game is about to start!\n")
 print('\033[39m')
 time.sleep(3)
 
-# Global variablies required to run game
+"""Setting Global variablies required to run game """
 
 
 def main():
@@ -47,10 +60,12 @@ def main():
     already_guessed = []
     play_game = ""
 
-# Loop to re-execute the game when the first round ends
-
 
 def play_loop():
+    """Looping to be able to restart the game when the first round ends.
+    Re-play or exist i.e Thanks for playing.
+    User is presented with 2 choices on either a win or a loss 
+    """
     global play_game
     play_game = input("Do you want to play again? y = yes, n = no \n")
     while play_game not in ["y", "n", "Y", "N"]:
@@ -64,10 +79,11 @@ def play_loop():
         print('\033[39m')
         exit()
 
-# Declaring all variable required for the game
-
 
 def hangman():
+    """
+    Initializing all variables needed for the game
+    """
     global count
     global display
     global word
@@ -76,7 +92,7 @@ def hangman():
     limit = 5
     guess = input("Hangman word: " + display + " Enter your guess: ")
     guess = guess.strip()
-    # Validate the input
+    """Validates the input"""
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
         print(Fore.RED + "Invalid input, Try a letter\n")
         print('\033[39m')
@@ -165,7 +181,7 @@ def hangman():
             print('\033[39m')
             play_loop()
 
-    # If user has guessed all the letters
+    """If user has guessed all the letters"""
     if word == '_' * length:
         print(Back.CYAN + Style.BRIGHT + "Congrats! You have won the game")
         play_loop()
