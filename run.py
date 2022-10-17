@@ -107,7 +107,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong guess. " + str(limit - count) + " guesses remaining\n")
+            print(Fore.RED + "Wrong" + str(limit - count) + " guesses left\n")
             print('\033[39m')
 
         elif count == 2:
@@ -120,7 +120,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong guess. " + str(limit - count) + " guesses remaining\n")
+            print(Fore.RED + "Wrong" + str(limit - count) + " guesses left\n")
             print('\033[39m')
 
         elif count == 3:
@@ -133,7 +133,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong guess. " + str(limit - count) + " guesses remaining\n")
+            print(Fore.RED + "Wrong" + str(limit - count) + " guesses left\n")
             print('\033[39m')
 
         elif count == 4:
@@ -146,7 +146,7 @@ def hangman():
                   "  |      \n"
                   "  |      \n"
                   "__|__\n")
-            print(Fore.RED + "Wrong guess. " + str(limit - count) + " last guess remaining\n")
+            print(Fore.RED + "Wrong" + str(limit - count) + " last guess\n")
             print('\033[39m')
 
         elif count == 5:
@@ -167,7 +167,7 @@ def hangman():
 
     # If user has guessed all the letters
     if word == '_' * length:
-        print(Back.CYAN + Style.BRIGHT + "Congrats! You have guessed the correct word!")
+        print(Back.CYAN + Style.BRIGHT + "Congrats! You have won the game")
         play_loop()
 
     elif count != limit:
