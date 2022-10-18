@@ -27,15 +27,20 @@ If loop checks that if no input is given, or two letters are given at once, or a
  - Several indentation issues that made functions break while creating the program.
 ![Commentbugs](https://i.imgur.com/RcU8Aaj.png)
 
-- While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost, the restart of the game has no issues.
+
+- 1. While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost, the restart of the game has no issues.
 ![newgamebug](https://i.imgur.com/nBZ7U90.png)
-- I tried changing to loop_game and play_game instead of calling for main function, but it still didn't fix the issue. 
+- 2. I tried changing to loop_game and play_game instead of calling for main function, but it still didn't fix the issue. 
 - Update: I noticed when restarting the repository the play again feature works after game is won, and after a short while, it does not work again.
 ![y/newgame](https://i.imgur.com/gclN4UM.png)
 
 - An error was caused by following line, where the word in play would not be displayed after game was lost. This was fixed by adding no blank space after the comma.
 ![wordwas](https://i.imgur.com/b3Z3MsT.png)
 
+- 3. While trying to make clear space between _ _ to more easly see the ammount of letters, I ran into a bug that pushes the underscores + the letters that are guessed.I tried making a blank space on each side individualy and both to make spacing clear, but it didnt fix the issue.
+![line](https://i.imgur.com/IhMrO7x.png)
+- It caused this. Instead of replacing each underscore with the correct guessed letter.
+![bug5](https://i.imgur.com/8sUGRmf.png)
 
 
 

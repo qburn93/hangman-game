@@ -56,7 +56,7 @@ def main():
     word = random.choice(words_to_guess)
     length = len(word)
     count = 0
-    display = ' _ ' * length
+    display = '_' * length
     already_guessed = []
     play_game = ""
 
