@@ -56,7 +56,7 @@ def main():
     word = random.choice(words_to_guess)
     length = len(word)
     count = 0
-    display = ' _ ' * length
+    display = '_' * length
     already_guessed = []
     play_game = ""
 
@@ -64,7 +64,7 @@ def main():
 def play_loop():
     """Looping to be able to restart the game when the first round ends.
     Re-play or exist i.e Thanks for playing.
-    User is presented with 2 choices on either a win or a loss 
+    User is presented with 2 choices on either a win or a loss
     """
     global play_game
     play_game = input("Do you want to play again? y = yes, n = no \n")
@@ -103,7 +103,7 @@ def hangman():
     elif guess in word:
         already_guessed.extend([guess])
         index = word.find(guess)
-        word = word[:index] + " _ " + word[index + 1:]
+        word = word[:index] + "_" + word[index + 1:]
         display = display[:index] + guess + display[index + 1:]
         print(display + "\n")
 
@@ -185,6 +185,7 @@ def hangman():
     """If user has guessed all the letters"""
     if word == '_' * length:
         print(Back.CYAN + Style.BRIGHT + "Congrats! You have won the game")
+        print('\033[39m')
         play_loop()
 
     elif count != limit:
