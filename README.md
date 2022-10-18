@@ -41,6 +41,8 @@ If loop checks that if no input is given, or two letters are given at once, or a
 ![line](https://i.imgur.com/IhMrO7x.png)
 - It caused this. Instead of replacing each underscore with the correct guessed letter.
 ![bug5](https://i.imgur.com/8sUGRmf.png)
+- How it is supposed to show.
+![rightway](https://i.imgur.com/GGhUUPi.png)
 
 
 
