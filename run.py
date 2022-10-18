@@ -56,7 +56,7 @@ def main():
     word = random.choice(words_to_guess)
     length = len(word)
     count = 0
-    display = '_' * length
+    display = ' _ ' * length
     already_guessed = []
     play_game = ""
 
@@ -74,6 +74,7 @@ def play_loop():
         print(Fore.GREEN + "Let's go again!")
         print('\033[39m')
         main()
+        hangman()
     elif play_game == "n":
         print(Fore.WHITE + Back.RED + Style.BRIGHT + "Thanks for playing!")
         print('\033[39m')
@@ -102,7 +103,7 @@ def hangman():
     elif guess in word:
         already_guessed.extend([guess])
         index = word.find(guess)
-        word = word[:index] + "_" + word[index + 1:]
+        word = word[:index] + " _ " + word[index + 1:]
         display = display[:index] + guess + display[index + 1:]
         print(display + "\n")
 
