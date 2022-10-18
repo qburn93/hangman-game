@@ -4,9 +4,9 @@ Import's for usage of colorama, random and time.
 """
 import random
 import time
-from words import words_to_guess
 import colorama
 from colorama import Fore, Back, Style
+from words import words_to_guess
 colorama.init()
 
 """
