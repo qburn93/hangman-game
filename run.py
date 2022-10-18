@@ -31,7 +31,8 @@ print("   ______ \n"
        "  |    / \ \n"
        "__|__\n")
 print(Fore.GREEN + "Game Rules are:\n")
-print("1. You have 5 attempts to guess the correct word or else you lose.")
+print("1. The theme is Avenger's universe.")
+print("2. You have 5 attempts to guess the correct word or else you lose.")
 print('\033[39m')
 name = input(Fore.CYAN + "Please Enter your name:\n")
 print('\033[39m')
@@ -71,7 +72,7 @@ def play_loop():
     while play_game not in ["y", "n", "Y", "N"]:
         play_game = input("Do you want to play again? y = yes, n = no \n")
     if play_game == "y":
-        print(Fore.GREEN + "Let's go again!")
+        print("Let's go again!")
         print('\033[39m')
         main()
         hangman()
@@ -184,7 +185,7 @@ def hangman():
 
     """If user has guessed all the letters"""
     if word == '_' * length:
-        print(Back.CYAN + Style.BRIGHT + "Congrats! You have won the game")
+        print(Style.BRIGHT + "Congrats! You have won the game")
         print('\033[39m')
         play_loop()
 

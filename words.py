@@ -1,1 +1,1 @@
-words_to_guess = ["Nature", "Earth", "Venture", "Pike", "Spock", "Leopard", "Snow", "Mountains", "Polar"]
+words_to_guess = ["hulk", "stark", "widow", "vision", "scarlet", "hawkeye", "steve", "loki", "thor"]
