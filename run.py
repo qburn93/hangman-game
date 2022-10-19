@@ -92,7 +92,8 @@ def hangman():
     global already_guessed
     global play_game
     limit = 5
-    guess = input("Hangman word: " + display + " Enter your guess:\n")
+    print("Hidden word is: \n" +display)
+    guess = input("Enter your guess: ")
     guess = guess.strip()
     """Validates the input"""
     if len(guess.strip()) == 0 or len(guess.strip()) >= 2 or guess <= "9":
