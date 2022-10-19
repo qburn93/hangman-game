@@ -10,11 +10,12 @@ It is a game for all ages to be played for a fun guessing game. It might not be 
 - One user reported that they could not make out how many letters there is in the hidden word due to the lower cases __ being too close to each other, and now it is more visible after taking care of it.
 ## Program Features 
 
-At the start, user is presented with input for their name.
-When user has lost the game, the option to play again or end the program is featured.
-Limit: It is the maximum guesses we provide to the user to guess a particular word.
-Guess: Takes the input from the user for the guessed letter. Guess.strip() removes the letter from the given word.
-If loop checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input and executes hangman again.
+- At the start, user is presented with input for their name.
+- When user has lost the game, the option to play again or end the program is featured.
+- Limit: It is the maximum guesses we provide to the user to guess a particular word.
+- Guess: Takes the input from the user for the guessed letter. Guess.strip() removes the letter from the given word.
+- Function checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input/already guessed letter and executes hangman again function again.
+![lettervalidator](https://i.imgur.com/wxDxTlc.png)
 
 ### Features Left to Implement
 - Several difficulties, from hard to medium and easy.
@@ -42,7 +43,7 @@ THANKS to my class tutor Alexander for trouble shooting with me.
 - An error was caused by following line, where the word in play would not be displayed after game was lost. This was fixed by adding no blank space after the comma.
 ![wordwas](https://i.imgur.com/b3Z3MsT.png)
 
-- 3. While trying to make clear space between _ _ to more easly see the ammount of letters, I ran into a bug that pushes the underscores + the letters that are guessed.I tried making a blank space on each side individualy and both to make spacing clear, but it didnt fix the issue.
+-  While trying to make clear space between _ _ to more easly see the ammount of letters, I ran into a bug that pushes the underscores + the letters that are guessed.I tried making a blank space on each side individualy and both to make spacing clear, but it didnt fix the issue.
 ![line](https://i.imgur.com/IhMrO7x.png)
 - It caused this. Instead of replacing each underscore with the correct guessed letter.
 ![bug5](https://i.imgur.com/8sUGRmf.png)
@@ -97,6 +98,7 @@ This game was deployed to github pages and Heroku.
 - 16 Scroll back to the top where you will see 'Open app'. BEFORE opening, you will need to redeploy as the first deployment happened before Node.js was installed as a buildpack. If you open now, there will be an error.
 <hr>
 
+# Github
 - Open the repository settings.
 - Go to "pages" (found under "code and automation").
 - Choose which branch to build from. You want to choose "main". Do not forget to save the settings.
@@ -106,7 +108,7 @@ This game was deployed to github pages and Heroku.
 - Copy the link to your deployed website (which can be found in the github pages settings, where you chose which branch to build from) and make sure it is operating as expected.
 - The deployed website will now be updated when you push anything new to the repository.
 
-The live link can be found here -  
+The live link can be found here -  https://hangman-python-game.herokuapp.com/
 
 
 ## Credits 
@@ -123,7 +125,7 @@ __Programs Used__
   - I tested the program for 2 hours to implement where and when to stop colorama. ie. changing color based on input or final game result.
   - Git was used for using the Gitpod terminal to commit to Git and push to Github.
   - Github - Github was used to store the project code and display the project in Github Pages. (https://github.com/)
- 
+  - Grammarly was used to spell check readme file and python code.
 
 
 
@@ -134,7 +136,7 @@ __Programs Used__
     - Cloning a repository with github desktop is easily done by clicking the green "code" button and choosing the "open in github desktop" option. If you do not have a clone already, github desktop will ask if you want to create a local clone. Click yes.
     - If you do it with git you have to write "git clone" and then specify what you want to clone.
 
-The live link can be found here - https://hangman-python-game.herokuapp.com/
+
 
 
 
