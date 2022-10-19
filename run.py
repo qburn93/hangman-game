@@ -16,11 +16,11 @@ introduction to game and rules with timed printed text
 
 print(Fore.WHITE + Style.BRIGHT + "\nWelcome to\n")
 time.sleep(0.5)
-print("|----------------------|")
+print("|------------------------------------|")
 time.sleep(0.5)
-print("|-----HANGMAN GAME-----|")
+print("|-----The Avenger's HANGMAN GAME-----|")
 time.sleep(0.5)
-print("|----------------------|")
+print("|------------------------------------|")
 time.sleep(1)
 print("   ______ \n"
        "  |     | \n"
