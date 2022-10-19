@@ -30,9 +30,12 @@ If loop checks that if no input is given, or two letters are given at once, or a
 
 - 1. While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost, the restart of the game has no issues.
 ![newgamebug](https://i.imgur.com/nBZ7U90.png)
-- 2. I tried changing to loop_game and play_game instead of calling for main function, but it still didn't fix the issue. 
+- I tried changing to loop_game and play_game instead of calling for main function, but it still didn't fix the issue. 
 - Update: I noticed when restarting the repository the play again feature works after game is won, and after a short while, it does not work again.
 ![y/newgame](https://i.imgur.com/gclN4UM.png)
+- Update: The issue was that only main function was called and I missed to add in the hangman function being called.
+THANKS to my class tutor Alexander for trouble shooting with me.
+![fixedreplaybug](https://i.imgur.com/ZjVoU8D.png) 
 
 - An error was caused by following line, where the word in play would not be displayed after game was lost. This was fixed by adding no blank space after the comma.
 ![wordwas](https://i.imgur.com/b3Z3MsT.png)
@@ -63,33 +66,33 @@ Program was tested manually several times after each implementation of loop and 
 This game was deployed to github pages and Heroku.
 
 # Heroku
-- 1. Log into the [Heroku](https://dashboard.heroku.com/apps) website
+- 1 Log into the [Heroku](https://dashboard.heroku.com/apps) website
 
-  2. Click 'New' and choose 'Create new app'.
+- 2 Click 'New' and choose 'Create new app'.
 
-  3. Choose an app name (this does NOT have to be identical to GitHub) and a region.
+- 3 Choose an app name (this does NOT have to be identical to GitHub) and a region.
 
-  4. Click 'Create app'.
-  ![createapp](https://i.imgur.com/rQkc1fe.png)
-  5. You should be on the 'Deploy' tab (1).
+- 4 Click 'Create app'.
+- ![createapp](https://i.imgur.com/rQkc1fe.png)
+- 5 You should be on the 'Deploy' tab (1).
 
-  6. Choose connect to GitHub account (2).
+- 6 Choose connect to GitHub account (2).
 
-  7. Search for the repository you want to deploy. The name needs to match exactly (3).
+- 7 Search for the repository you want to deploy. The name needs to match exactly (3).
 
-  8. Click 'Connect' (4).
-  9. Select whether you want automatic deployment.
-  10. Choose which branch you want to deploy.
-  11. Click 'Deploy branch'
-  12. When the deployment is complete, go to the 'Settings' page to configure vars and buildpacks.
+- 8 Click 'Connect' (4).
+- 9 Select whether you want automatic deployment.
+- 10 Choose which branch you want to deploy.
+- 11 Click 'Deploy branch'
+- 12 When the deployment is complete, go to the 'Settings' page to configure vars and buildpacks.
 
-  13. Click 'Reveal Config Vars'. For this project, we needed PORT 8000 (as a var) and the Node.js and Python buildpacks.
+- 13 Click 'Reveal Config Vars'. For this project, we needed PORT 8000 (as a var) and the Node.js and Python buildpacks.
 
-  14. Click 'Add' to fill out PORT and 8000 in he KEY / VALUE pair. This has been done.
+- 14 Click 'Add' to fill out PORT and 8000 in he KEY / VALUE pair. This has been done.
 
-  15. Click 'Add buildpack' and select Node.js from the options.
+- 15 Click 'Add buildpack' and select Node.js from the options.
 
-  16. Scroll back to the top where you will see 'Open app'. BEFORE opening, you will need to redeploy as the first deployment happened before Node.js was installed as a buildpack. If you open now, there will be an error.
+- 16 Scroll back to the top where you will see 'Open app'. BEFORE opening, you will need to redeploy as the first deployment happened before Node.js was installed as a buildpack. If you open now, there will be an error.
 <hr>
 
 - Open the repository settings.
