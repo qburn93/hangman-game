@@ -1,7 +1,8 @@
 
 
 # Hangman game
-
+Can you guess the right answer before it is all over? Do you have what it takes to save the man before he is hanged? This Avengers universe Hangman Game is a game of the mind. You only have so many guesses before it is game over! You guess one letter at a time, get a letter in the word right and you might just get a shot more. Guess it wrong and he is one step closer to Game Over.
+It is a game for all ages to be played for a fun guessing game. It might not be guessed in the first try but give it a bit of thought and you might just guess it in the end.
 
 
 ## User stories
@@ -20,6 +21,7 @@ If loop checks that if no input is given, or two letters are given at once, or a
 - Saving high score.
 - Add more visuals to intro/game immersion while playing.
 - I would like to add some API features in the future, and maybe a google excel sheet of the high score or which words have the most lost games of the chosen words. This is nothing for the user though primarily a data-driven feature.
+- I cannot make clear underscores on heroku terminals to see how many words there are in the hidden word, they are visibly apart on gitpods terminal though but it is something il have to get back on in the future.
 
 ### Testing and fixed Bugs
 - The program was tested manually with pep8:
