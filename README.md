@@ -1,8 +1,8 @@
 
 
 # Avenger's Hangman Game
-Can you guess the right answer before it is all over? Do you have what it takes to save the man before he is hanged? This Avengers universe Hangman Game is a game of the mind. You only have so many guesses before it is game over! You guess one letter at a time, get a letter in the word right and you might just get a shot more. Guess it wrong and he is one step closer to Game Over.
-It is a game for all ages to be played for a fun guessing game. It might not be guessed in the first try but give it a bit of thought and you might just guess it in the end.
+Can you guess the right answer before it is all over? Do you have what it takes to save the man before he is hanged? This Avengers universe Hangman Game is a game of the mind. You only have so many guesses before it is game over! You guess one letter at a time, get a letter in the word right, and you might just get a shot more. Guess it wrong, and he is one step closer to Game Over.
+It is a game for all ages to be played for a fun guessing game. It might not be guessed on the first try, but give it a bit of thought, and you might just guess it in the end.
 
 
 ## User stories
@@ -10,40 +10,61 @@ It is a game for all ages to be played for a fun guessing game. It might not be 
 - One user reported that they could not make out how many letters there is in the hidden word due to the lower cases __ being too close to each other, and now it is more visible after taking care of it.
 ## Program Features 
 
-- At the start, user is presented with input for their name.
+- At the start, user is presented with information about the game's theme and is asked for their name.
+![intro](https://i.imgur.com/EVj7mj6.png)
+![name](https://i.imgur.com/b8PgcOq.png)
+- Guess: Takes the input from the user for the guessed letter. Guess.strip() method removes the letter from the given word.
+
 - When user has lost the game, the option to play again or end the program is featured.
 - Limit: It is the maximum guesses we provide to the user to guess a particular word.
 - Guess: Takes the input from the user for the guessed letter. Guess.strip() removes the letter from the given word.
-- Function checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input/already guessed letter and executes hangman again function again.
+- Function checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input/already guessed letter else it executes hangman function again.
+- Wrong answer.
+![elsewrong](https://i.imgur.com/pJyg9x8.png)
+
+<hr>
+
+<hr> 
+
 ![lettervalidator](https://i.imgur.com/wxDxTlc.png)
+- Already guessed.
+![alreadyguessed](https://i.imgur.com/TOlpPBO.png)
+- Invalid input display.
+![invalidinput](https://i.imgur.com/1C9lrlx.png)
+- This displays the remaining guesses left and the start of the hangman is initialized
+![wrongguess](https://i.imgur.com/NjOaB2z.png)
+- Play again display.
+![playagain](https://i.imgur.com/nCr1sZN.png)
+- Ending game.
+![endinggame](https://i.imgur.com/SWrAiv6.png)
 
 ### Features Left to Implement
 - Several difficulties, from hard to medium and easy.
 - Saving high score.
-- Add more visuals to intro/game immersion while playing.
+- Add more visuals to intro/game immersion while playing, for example changing background color when a wrong or right answer is registered, I need to look in to what contrasts are acceptable.
 - I would like to add some API features in the future, and maybe a google excel sheet of the high score or which words have the most lost games of the chosen words. This is nothing for the user though primarily a data-driven feature.
-- I cannot make clear underscores on heroku terminals to see how many words there are in the hidden word, they are visibly apart on gitpods terminal though but it is something il have to get back on in the future.
+- I cannot make clear underscores on heroku terminals to see how many words there are in the hidden word, they are visibly apart on gitpods terminal though, but it is something il have to get back on in the future.
 
 ### Testing and fixed Bugs
 - The program was tested manually with pep8:
- - Error messeges regarding character length of each code lines that I have had to shorten. 
+ - Error messages regarding character length of each code lines that I have had to shorten. 
  - Several indentation issues that made functions break while creating the program.
 ![Commentbugs](https://i.imgur.com/RcU8Aaj.png)
 
 
-- 1. While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost, the restart of the game has no issues.
+-  While trying to start a new game AFTER game is WON, the play again Y button just ends the game instead of restarting. But if game is lost, the restart of the game has no issues.
 ![newgamebug](https://i.imgur.com/nBZ7U90.png)
 - I tried changing to loop_game and play_game instead of calling for main function, but it still didn't fix the issue. 
 - Update: I noticed when restarting the repository the play again feature works after game is won, and after a short while, it does not work again.
 ![y/newgame](https://i.imgur.com/gclN4UM.png)
-- Update: The issue was that only main function was called and I missed to add in the hangman function being called.
-THANKS to my class tutor Alexander for trouble shooting with me.
+- Update: The issue was that only main function was called, and I missed to add in the hangman function being called.
+THANKS to my class tutor Alexander for troubleshooting with me.
 ![fixedreplaybug](https://i.imgur.com/ZjVoU8D.png) 
 
 - An error was caused by following line, where the word in play would not be displayed after game was lost. This was fixed by adding no blank space after the comma.
 ![wordwas](https://i.imgur.com/b3Z3MsT.png)
 
--  While trying to make clear space between _ _ to more easly see the ammount of letters, I ran into a bug that pushes the underscores + the letters that are guessed.I tried making a blank space on each side individualy and both to make spacing clear, but it didnt fix the issue.
+-  While trying to make clear space between _ _ to more easily see the ammount of letters, I ran into a bug that pushes the underscores + the letters that are guessed.I tried making a blank space on each side individually and both to make spacing clear, but it didn't fix the issue.
 ![line](https://i.imgur.com/IhMrO7x.png)
 - It caused this. Instead of replacing each underscore with the correct guessed letter.
 ![bug5](https://i.imgur.com/8sUGRmf.png)
@@ -60,7 +81,7 @@ Program was tested manually several times after each implementation of loop and 
 
 ### Unfixed Bugs
 
-- I have a bug at an early stage where the get_valid_letter thinks every letter input is correct and it does not continue the game. It just congratulates for winning the game. Will update in future...
+- I have a bug at an early stage where the get_valid_letter thinks every letter input is correct, and it does not continue the game. It just congratulates for winning the game. Will update in future...
 - UPDATE: There was a Blankspace indentation error on validate input function.
 ![validatorbug](https://i.imgur.com/7bYv6rq.png)
 
@@ -69,7 +90,7 @@ Program was tested manually several times after each implementation of loop and 
 This game was deployed to github pages and Heroku.
 
 # Heroku
-- 1 Log into the [Heroku](https://dashboard.heroku.com/apps) website
+- 1 Log in to the [Heroku](https://dashboard.heroku.com/apps) website
 
 - 2 Click 'New' and choose 'Create new app'.
 
@@ -95,7 +116,7 @@ This game was deployed to github pages and Heroku.
 
 - 15 Click 'Add buildpack' and select Node.js from the options.
 
-- 16 Scroll back to the top where you will see 'Open app'. BEFORE opening, you will need to redeploy as the first deployment happened before Node.js was installed as a buildpack. If you open now, there will be an error.
+- 16 Scroll back to the top where you will see 'Open app'. BEFORE opening, you will need to redeploy, as the first deployment happened before Node.js was installed as a buildpack. If you open now, there will be an error.
 <hr>
 
 # Github
