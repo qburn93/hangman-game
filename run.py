@@ -32,7 +32,7 @@ print("   ______ \n"
        "__|__\n")
 print(Fore.GREEN + "Game Rules are:\n")
 print("1. The theme is Avenger's universe.")
-print("2. You have 5 attempts to guess the correct word or else you lose.")
+print("2. You have 5 attempts to guess the correct Hero Names or else you lose.")
 print('\033[39m')
 name = input(Fore.CYAN + "Please Enter your name:\n")
 print('\033[39m')
