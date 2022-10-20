@@ -20,7 +20,7 @@ It is a game for all ages to be played for a fun guessing game. It might not be 
 - Guess: Takes the input from the user for the guessed letter. Guess.strip() removes the letter from the given word.
 - Function checks that if no input is given, or two letters are given at once, or a number is entered as an input, it tells the user about the invalid input/already guessed letter else it executes hangman function again.
 - Wrong answer.
-![elsewrong](https://i.imgur.com/pJyg9x8.png)
+![elsewrong](https://i.imgur.com/CUyOKkN.png)
 
 <hr>
 
@@ -84,6 +84,9 @@ Program was tested manually several times after each implementation of loop and 
 - I have a bug at an early stage where the get_valid_letter thinks every letter input is correct, and it does not continue the game. It just congratulates for winning the game. Will update in future...
 - UPDATE: There was a Blankspace indentation error on validate input function.
 ![validatorbug](https://i.imgur.com/7bYv6rq.png)
+- Right before submiting I noticed that if user inputs letter to fast the structure of the hangman glitches out.
+- Im not really sure what is causing this, I will deffinetly troubleshoot more when time is I have more time.
+![fastglitch](https://i.imgur.com/x9tntdt.png)
 
 ## Deployment
 

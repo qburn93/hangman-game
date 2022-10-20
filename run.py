@@ -92,7 +92,7 @@ def hangman():
     global already_guessed
     global play_game
     limit = 5
-    print("Hidden word is: \n" +display)
+    print("Hidden word is: \n" + display)
     guess = input("Enter your guess: ")
     guess = guess.strip()
     """Validates the input"""
