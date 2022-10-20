@@ -141,7 +141,7 @@ The live link can be found here -  https://hangman-python-game.herokuapp.com/
 [Video Link](https://www.youtube.com/watch?v=ynwB-QfOPRw&t=614s&ab_channel=CSStudents)
 - Credit on how to implement time.sleep delay for increased immersion.
 [Programiz](https://www.programiz.com/python-programming/time/sleep)
-
+- Code Institute for the template used.
 
 ### Content 
 
